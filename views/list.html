@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+{% block title %}Posts{% endblock %}
+
+{% block content %}
+  <h1>Posts</h1>
+  <p>You have <strong>{{ posts.length }}</strong> posts!</p>
+  <p><a href="/post/new">Create a Post</a></p>
+  <ul id="posts">
+    {% for post in posts %}
+      <li>
+        <h2>{{ post.title }}</h2>
+        <p><a href="/post/{{ post.id }}">Read post</a></p>
+      </li>
+	    <head>
+        <meta charset='utf-8'>
+        <title>作業</title>
+        <style>
+body {
+    background-image: url("http://i.imgur.com/DAsgX8L.jpg");
+}
+</style>
+    </head>
+<body>
+<a href="http://xie-sir.github.io/0/110110614_2.html">我的超連結</a>
+<table border=1>
+        　<tr>
+        　　<th>名字</th>
+        　　<th>謝汯恩</th>
+        　</tr>
+        　<tr>
+        　　<td>性別</td>
+        　　<td>男</td>
+        　</tr>
+        　<tr>
+        　　<td>生日</td>
+        　　<td>5.27</td>
+        　</tr> 
+        　<tr>
+        　　<td>學校</td>
+        　　<td>國立金門大學</td>
+        　</tr>
+        </table>
+</body>
+    {% endfor %}
+  </ul>
+{% endblock %}
